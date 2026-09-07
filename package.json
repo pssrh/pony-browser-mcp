@@ -1,6 +1,6 @@
 {
   "name": "pony-browser-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Local Chrome control for MCP clients with isolated agent windows and explicit human review prompts.",
   "mcpName": "io.github.pssrh/pony-browser-mcp",
   "type": "module",

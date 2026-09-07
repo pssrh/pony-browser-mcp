@@ -30,8 +30,8 @@ that returns a Chrome update manifest, for example:
 ```bash
 node scripts/render-update-manifest.mjs \
   --extension-id gdocpeeeaeholmnejpepngifldepehkn \
-  --version 1.0.0 \
-  --crx-url https://github.com/pssrh/pony-browser-mcp/releases/download/v1.0.0/pony-browser-mcp-enterprise-1.0.0.crx \
+  --version 1.0.1 \
+  --crx-url https://github.com/pssrh/pony-browser-mcp/releases/download/v1.0.1/pony-browser-mcp-enterprise-1.0.1.crx \
   --output store/site/updates/updates.xml
 ```
 
@@ -84,7 +84,7 @@ The MCP server is separate from the extension. Install a pinned release asset
 on each machine that runs an MCP client, or run it from a checked-out release:
 
 ```bash
-npm install --global https://github.com/pssrh/pony-browser-mcp/releases/download/v1.0.0/pony-browser-mcp-1.0.0.tgz
+npm install --global https://github.com/pssrh/pony-browser-mcp/releases/download/v1.0.1/pony-browser-mcp-1.0.1.tgz
 codex mcp add pony-browser -- pony-browser-mcp
 ```
 

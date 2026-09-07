@@ -20,7 +20,7 @@ browser service and does not expose browser control on the LAN.
 After a release is published:
 
 ```bash
-npm install --global https://github.com/pssrh/pony-browser-mcp/releases/download/v1.0.0/pony-browser-mcp-1.0.0.tgz
+npm install --global https://github.com/pssrh/pony-browser-mcp/releases/download/v1.0.1/pony-browser-mcp-1.0.1.tgz
 codex mcp add pony-browser -- pony-browser-mcp
 ```
 

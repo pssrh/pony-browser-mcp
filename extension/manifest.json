@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Pony Browser MCP",
   "short_name": "Pony MCP",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Control local Chrome from an MCP client with isolated agent windows, named task groups, and human review prompts.",
   "permissions": [
     "clipboardRead",
