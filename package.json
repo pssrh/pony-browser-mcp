@@ -19,8 +19,10 @@
   ],
   "scripts": {
     "start": "node index.js",
-    "test": "node scripts/validate-release.mjs",
-    "build:cws": "./scripts/build-cws.sh"
+    "test": "node scripts/validate-release.mjs && node scripts/validate-enterprise.mjs",
+    "build:cws": "./scripts/build-cws.sh",
+    "build:enterprise": "node scripts/build-enterprise-crx.mjs",
+    "render:update-manifest": "node scripts/render-update-manifest.mjs"
   },
   "keywords": [
     "mcp",

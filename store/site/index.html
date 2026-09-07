@@ -37,15 +37,24 @@
     agent tasks in dedicated windows and named tab groups. Browser traffic stays
     on the machine through a loopback-only bridge.</p>
     <div class="actions">
-      <a class="button" href="https://github.com/pssrh/pony-browser-mcp/releases/latest">Get the extension</a>
+      <a class="button" href="https://github.com/pssrh/pony-browser-mcp/releases/latest">Get the release</a>
       <a class="button secondary" href="https://github.com/pssrh/pony-browser-mcp">View source</a>
     </div>
 
     <section>
       <h2>Runs with Codex</h2>
-      <p>Install the companion server with
-      <code>codex mcp add pony-browser -- npx -y pony-browser-mcp@latest</code>.
-      The Chrome Web Store extension updates independently through Chrome.</p>
+      <p>Install the companion server from a pinned GitHub release with
+      <code>npm install --global</code>, then add it with
+      <code>codex mcp add pony-browser -- pony-browser-mcp</code>. Managed Chrome
+      policy keeps the signed extension updated without a store listing.</p>
+    </section>
+    <section>
+      <h2>Managed distribution</h2>
+      <p>Use the included policy scripts for macOS, Windows, or Linux. They
+      install the extension once through Chrome policy and follow the HTTPS
+      update manifest on GitHub Pages. See the
+      <a href="https://github.com/pssrh/pony-browser-mcp/blob/main/enterprise/README.md">enterprise guide</a>
+      for commands and verification.</p>
     </section>
     <section>
       <h2>Built for concurrent work</h2>

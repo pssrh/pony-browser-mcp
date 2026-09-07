@@ -17,16 +17,18 @@ browser service and does not expose browser control on the LAN.
 
 ## Codex setup
 
-After the npm package and Chrome Web Store listing are live:
+After a release is published:
 
 ```bash
-codex mcp add pony-browser -- npx -y pony-browser-mcp@latest
+npm install --global https://github.com/pssrh/pony-browser-mcp/releases/download/v1.0.0/pony-browser-mcp-1.0.0.tgz
+codex mcp add pony-browser -- pony-browser-mcp
 ```
 
-Install the extension from the Chrome Web Store listing linked from the
-[project site](https://pssrh.github.io/pony-browser-mcp/). Chrome handles future
-extension updates. Developers can still load `extension/` unpacked for local
-testing.
+For shared Windows, macOS, or Linux machines, install the signed extension
+through the managed-policy scripts in [enterprise/](enterprise/). Chrome then
+checks the GitHub Pages update manifest and upgrades the extension without a
+Chrome Web Store listing. Developers can still load `extension/` unpacked for
+local testing.
 
 ## Build and verify
 

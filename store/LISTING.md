@@ -1,4 +1,9 @@
-# Chrome Web Store listing
+# Optional Chrome Web Store listing
+
+This listing is retained for a future store submission. The supported free
+distribution path is the signed CRX plus Chrome managed policy documented in
+[`enterprise/README.md`](../enterprise/README.md); no Chrome Web Store account
+or review is required for that path.
 
 ## Product details
 
