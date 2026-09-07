@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy | Pony Browser MCP</title>
+  <meta name="description" content="Privacy policy for the Pony Browser MCP Chrome extension.">
+  <style>
+    :root { color-scheme: light; font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: #17201f; background: #f7faf9; }
+    body { margin: 0; }
+    header { border-bottom: 1px solid #d8e1df; background: #ffffff; }
+    header div, main { width: min(760px, calc(100% - 40px)); margin: 0 auto; }
+    header div { display: flex; align-items: center; gap: 12px; padding: 18px 0; font-weight: 700; }
+    header img { width: 36px; height: 36px; border-radius: 7px; }
+    main { padding: 44px 0 72px; }
+    h1 { margin: 0 0 8px; font-size: 34px; line-height: 1.2; letter-spacing: 0; }
+    h2 { margin: 36px 0 10px; font-size: 20px; letter-spacing: 0; }
+    p, li { color: #465250; line-height: 1.7; }
+    code { color: #0a6a61; }
+    a { color: #006f65; }
+    .updated { margin-top: 0; color: #6b7775; }
+  </style>
+</head>
+<body>
+  <header><div><img src="icon.png" alt=""><span>Pony Browser MCP</span></div></header>
+  <main>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Effective September 7, 2026</p>
+
+    <p>Pony Browser MCP connects Chrome to a companion MCP server selected and
+    run by the user. The extension has no PonyT-operated backend, advertising,
+    analytics, or telemetry.</p>
+
+    <h2>Data the extension can handle</h2>
+    <p>When the user or their MCP client requests an action, the extension can
+    handle website content, tab and navigation details, screenshots, form
+    values, clipboard content, local storage, and cookies. These categories are
+    required to provide browser automation and are processed only for the
+    requested operation.</p>
+
+    <h2>How data moves</h2>
+    <p>The extension communicates with the companion MCP server only through
+    WebSocket connections to <code>127.0.0.1</code>. It does not send browser
+    data to a PonyT server. The MCP client may send tool results to the model
+    provider configured by the user; that transfer is controlled by the MCP
+    client and is covered by the provider's privacy terms.</p>
+
+    <h2>Storage and retention</h2>
+    <p>The extension stores connection state, task workspaces, and a short local
+    action log in Chrome extension storage. It does not create a remote profile
+    or retain browser content on developer-operated infrastructure. Removing
+    the extension removes its Chrome-managed local storage.</p>
+
+    <h2>Sharing and sale</h2>
+    <p>PonyT does not collect, sell, rent, or share extension user data. The
+    extension does not use browser data for advertising, credit decisions, or
+    purposes unrelated to its browser-control function.</p>
+
+    <h2>Permissions</h2>
+    <p>Broad page, cookie, scripting, tab, clipboard, and optional debugger
+    access is necessary because the extension operates websites chosen by the
+    user. Debugger access is disabled by default and is used only when a user
+    request requires the fallback. Storage, alarms, offscreen, notification,
+    and navigation permissions maintain the local bridge and task state.</p>
+
+    <h2>Security</h2>
+    <p>The companion server binds to loopback only. Software already running on
+    the same computer may be able to reach local services, so users should run
+    only trusted MCP clients and disable the extension when browser automation
+    is not wanted.</p>
+
+    <h2>Open source and contact</h2>
+    <p>Source code, license notices, and issue reporting are available at
+    <a href="https://github.com/pssrh/pony-browser-mcp">github.com/pssrh/pony-browser-mcp</a>.
+    The project is based on Browser MCP by Agent360 under the MIT License.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,59 @@
+{
+  "name": "pony-browser-mcp",
+  "version": "1.0.0",
+  "description": "Local Chrome control for MCP clients with isolated agent windows and explicit human review prompts.",
+  "mcpName": "io.github.pssrh/pony-browser-mcp",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "pony-browser-mcp": "./bin/cli.js"
+  },
+  "files": [
+    "index.js",
+    "tools.js",
+    "bin/",
+    "extension/",
+    "LICENSE",
+    "NOTICE.md",
+    "README.md"
+  ],
+  "scripts": {
+    "start": "node index.js",
+    "test": "node scripts/validate-release.mjs",
+    "build:cws": "./scripts/build-cws.sh"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "browser-automation",
+    "chrome",
+    "chrome-extension",
+    "codex",
+    "ai-agent",
+    "human-in-the-loop"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "author": {
+    "name": "PonyT contributors",
+    "url": "https://github.com/pssrh/pony-browser-mcp"
+  },
+  "license": "MIT",
+  "homepage": "https://pssrh.github.io/pony-browser-mcp/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pssrh/pony-browser-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pssrh/pony-browser-mcp/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.28.0",
+    "ws": "^8.18.0"
+  }
+}

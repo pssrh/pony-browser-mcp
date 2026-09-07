@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pony Browser MCP</title>
+  <meta name="description" content="A local Chrome bridge for MCP clients with isolated agent workspaces.">
+  <style>
+    :root { color-scheme: light; font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: #17201f; background: #f7faf9; }
+    body { margin: 0; }
+    header { border-bottom: 1px solid #d8e1df; background: #ffffff; }
+    nav, main, footer { width: min(920px, calc(100% - 40px)); margin: 0 auto; }
+    nav { display: flex; align-items: center; justify-content: space-between; min-height: 70px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 750; }
+    .brand img { width: 38px; height: 38px; border-radius: 7px; }
+    nav a, footer a { color: #006f65; }
+    main { padding: 72px 0 80px; }
+    h1 { max-width: 700px; margin: 0; font-size: clamp(38px, 6vw, 66px); line-height: 1.04; letter-spacing: 0; }
+    .lead { max-width: 650px; margin: 24px 0 38px; font-size: 20px; line-height: 1.6; color: #465250; }
+    .actions { display: flex; flex-wrap: wrap; gap: 14px; }
+    .button { display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border: 1px solid #006f65; border-radius: 6px; color: #ffffff; background: #006f65; text-decoration: none; font-weight: 700; }
+    .button.secondary { color: #006f65; background: transparent; }
+    section { border-top: 1px solid #d8e1df; padding: 34px 0; }
+    section h2 { margin: 0 0 10px; font-size: 22px; letter-spacing: 0; }
+    section p { max-width: 720px; color: #465250; line-height: 1.7; }
+    code { color: #0a6a61; }
+    footer { border-top: 1px solid #d8e1df; padding: 24px 0 40px; color: #6b7775; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav><div class="brand"><img src="icon.png" alt=""><span>Pony Browser MCP</span></div><a href="privacy.html">Privacy</a></nav>
+  </header>
+  <main>
+    <h1>Local Chrome control for MCP agents</h1>
+    <p class="lead">Use your existing Chrome profile while keeping concurrent
+    agent tasks in dedicated windows and named tab groups. Browser traffic stays
+    on the machine through a loopback-only bridge.</p>
+    <div class="actions">
+      <a class="button" href="https://github.com/pssrh/pony-browser-mcp/releases/latest">Get the extension</a>
+      <a class="button secondary" href="https://github.com/pssrh/pony-browser-mcp">View source</a>
+    </div>
+
+    <section>
+      <h2>Runs with Codex</h2>
+      <p>Install the companion server with
+      <code>codex mcp add pony-browser -- npx -y pony-browser-mcp@latest</code>.
+      The Chrome Web Store extension updates independently through Chrome.</p>
+    </section>
+    <section>
+      <h2>Built for concurrent work</h2>
+      <p>Each task can use a stable workspace, a dedicated browser window, and
+      explicit cleanup. Human review prompts remain visible for credentials,
+      two-factor authentication, and other sensitive steps.</p>
+    </section>
+    <section>
+      <h2>No hosted relay</h2>
+      <p>The extension discovers the local MCP server on <code>127.0.0.1</code>.
+      It contains no advertising, analytics, or PonyT-operated data service.</p>
+    </section>
+  </main>
+  <footer>Based on Browser MCP by Agent360 under the MIT License.</footer>
+</body>
+</html>
