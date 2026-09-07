@@ -51,13 +51,15 @@ sudo ./enterprise/macos/install-policy.sh \
   --update-url https://pssrh.github.io/pony-browser-mcp/updates/updates.xml
 ```
 
-Windows (current user; add `-Machine` from an elevated PowerShell for all
-users):
+Windows (use an elevated PowerShell and `-Machine` on an Active Directory
+managed device; Chrome requires that prerequisite for non-Web-Store automatic
+installation):
 
 ```powershell
 .\enterprise\windows\Install-PonyBrowserMcpPolicy.ps1 `
   -ExtensionId gdocpeeeaeholmnejpepngifldepehkn `
-  -UpdateUrl https://pssrh.github.io/pony-browser-mcp/updates/updates.xml
+  -UpdateUrl https://pssrh.github.io/pony-browser-mcp/updates/updates.xml `
+  -Machine
 ```
 
 Linux (Chrome or Chromium):

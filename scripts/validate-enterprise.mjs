@@ -22,6 +22,9 @@ const windows = await readFile(join(root, 'enterprise/windows/Install-PonyBrowse
 if (!windows.includes('ExtensionSettings') || !windows.includes('force_installed')) {
   throw new Error('Windows policy script is missing ExtensionSettings force installation.');
 }
+if (windows.includes('-AsHashtable')) {
+  throw new Error('Windows policy script must remain compatible with PowerShell 5.1.');
+}
 const mac = await readFile(join(root, 'enterprise/macos/install-policy.sh'), 'utf8');
 if (!mac.includes('com.google.Chrome.plist') || !mac.includes('force_installed')) {
   throw new Error('macOS policy script is missing Chrome managed policy installation.');

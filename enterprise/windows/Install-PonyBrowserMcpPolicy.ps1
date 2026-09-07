@@ -19,8 +19,12 @@ $settings = @{}
 $existing = Get-ItemProperty -Path $policyPath -Name ExtensionSettings -ErrorAction SilentlyContinue
 if ($null -ne $existing -and $existing.ExtensionSettings) {
     try {
-        $parsed = $existing.ExtensionSettings | ConvertFrom-Json -AsHashtable
-        if ($parsed -is [hashtable]) { $settings = $parsed }
+        $parsed = $existing.ExtensionSettings | ConvertFrom-Json
+        if ($null -ne $parsed) {
+            foreach ($property in $parsed.PSObject.Properties) {
+                $settings[$property.Name] = $property.Value
+            }
+        }
     } catch {
         Write-Warning 'Existing ExtensionSettings was not valid JSON; replacing only that policy value.'
     }
